@@ -3,6 +3,7 @@ project(NitroCppTest-DabisaKelava)
 set(CMAKE_CXX_STANDARD 14)
 
 include("cmake/googletest.cmake")
+include("cmake/jsoncpp.cmake")
 
 enable_testing()
 
