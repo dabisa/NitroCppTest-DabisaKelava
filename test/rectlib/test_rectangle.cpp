@@ -5,6 +5,6 @@
 
 TEST (Rectangle, test) {
 
-	EXPECT_EQ(Rectangle::test(), "Nitro");
+    EXPECT_EQ(Rectangle::test(), "Nitro");
 }
 

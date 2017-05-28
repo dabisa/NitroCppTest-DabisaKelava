@@ -7,7 +7,7 @@ class Rectangle {
 
 public:
 
-	static std::string test();
+    static std::string test();
 
 };
 
