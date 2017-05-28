@@ -79,9 +79,7 @@ TEST (Interval, intersection_equal) {
     EXPECT_TRUE (Interval::canIntersect(a, b));
 
     Interval c = Interval::createIntersection(a, b);
-    Interval d = Interval::createIntersection(b, a);
 
-    EXPECT_EQ(c, d);
     EXPECT_EQ(c, Interval(10, 30));
 }
 
