@@ -55,10 +55,10 @@ To run tests execute (from build folder):
 ```
 or execte unit tests directly:
 ```
-> ./testAll
+> Debug\testAll
 ```
 
 To run application execute (from build folder):
 ```
-> rect <json_input_file>
+> Debug\rect <json_input_file>
 ```
