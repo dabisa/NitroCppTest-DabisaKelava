@@ -8,9 +8,7 @@
  * \brief This class represents half-closed interval [first, last>
  */
 class Interval {
-
 public:
-
     Interval(int first, int size) : first_(first), size_(size) {
         if (size <= 0) {
             throw std::invalid_argument("interval size is not positive integer");
@@ -42,7 +40,6 @@ public:
     }
 
 private:
-
     const int first_;
     const int size_;
 };

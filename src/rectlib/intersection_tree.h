@@ -11,9 +11,8 @@
  * \brief This class is used to calculate all possible intersections of given set of rectangles
  */
 class IntersectionTree {
-
 public:
-    using NodeVisitor = std::function<void (const std::vector<unsigned>& ids, const Rectangle& rect)>;
+    using NodeVisitor = std::function<void(const std::vector<unsigned>& ids, const Rectangle& rect)>;
 
     /**
      * \brief Generates IntersectionTree object from a given vector of rectangles
@@ -30,13 +29,11 @@ private:
      * \brief This class represents node in a tree.
      */
     class Node {
-
     public:
         /**
          * \brief Creates dummy root node. Rectangle in this node is not used.
          */
         Node() : id_(0), rect_(Rectangle(0,0,1,1)) {}
-
         Node(unsigned id, const Rectangle& rect) : id_(id), rect_(rect) {}
 
         unsigned getId() const {

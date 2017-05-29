@@ -5,9 +5,7 @@
 
 
 class Rectangle {
-
 public:
-
     Rectangle(int left, int top, int width, int height) : hinterval_(left, width), vinterval_(top, height) {}
 
     Rectangle(const Interval& hinterval, const Interval& vinterval) : hinterval_(hinterval), vinterval_(vinterval) {}
@@ -42,7 +40,6 @@ public:
     }
 
 private:
-
     const Interval hinterval_;
     const Interval vinterval_;
 };

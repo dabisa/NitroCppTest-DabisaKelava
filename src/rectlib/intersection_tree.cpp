@@ -6,12 +6,10 @@
 
 
 IntersectionTree IntersectionTree::generate(const std::vector<Rectangle>& rectangles) {
-
     std::function<void(Node&)> generate_recursive;
     generate_recursive = [&generate_recursive, &rectangles] (Node& node) {
-
-        for(unsigned i = node.getId(); i < rectangles.size(); ++i) {
-            if(node.canCreateChild(rectangles[i])) {
+        for (unsigned i = node.getId(); i < rectangles.size(); ++i) {
+            if (node.canCreateChild(rectangles[i])) {
                 Node& child_node = node.createChild(i+1, rectangles[i]);
                 generate_recursive(child_node);
             }
@@ -24,20 +22,18 @@ IntersectionTree IntersectionTree::generate(const std::vector<Rectangle>& rectan
 }
 
 void IntersectionTree::visitInLevelOrder(const NodeVisitor& visitor) const {
-
     unsigned tree_depth = root_.depth();
     std::vector<unsigned> id_set;
-    for(unsigned level = 1; level <= tree_depth; ++level) {
+    for (unsigned level = 1; level <= tree_depth; ++level) {
         root_.visitDepth(level, id_set, visitor);
     }
 }
 
 void IntersectionTree::Node::visitDepth(unsigned depth, std::vector<unsigned>& ids, const NodeVisitor& visitor) const {
-
-    if(depth == 0) {
+    if (depth == 0) {
         visitor(ids, rect_);
     } else {
-        for(const Node& childNode : children_) {
+        for (const Node& childNode : children_) {
             ids.push_back(childNode.getId() - 1);
             childNode.visitDepth(depth - 1, ids, visitor);
             ids.pop_back();

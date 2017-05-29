@@ -9,9 +9,7 @@
  * \brief This class is used to read rectangles from json file.
  */
 class JsonRectangleReader {
-
 public:
-
     class ParsingError : public std::runtime_error {
     public:
         ParsingError(std::string description) : std::runtime_error(description) {}
@@ -29,7 +27,6 @@ public:
     std::vector<Rectangle> read() const;
 
 private:
-
     static constexpr unsigned INFINITE_RECTANGLES = 0;
 
     const char* file_name_;
