@@ -31,7 +31,8 @@ int main(int argc, char* argv[]) {
 }
 
 std::ostream& operator<< (std::ostream& stream, const Rectangle& rect) {
-	cout << "(" << rect.getLeft() << "," << rect.getTop() << "), w=" << rect.getWidth() << ", h=" << rect.getHeight();
+	stream << "(" << rect.getLeft() << "," << rect.getTop() << "), w=" << rect.getWidth() << ", h=" << rect.getHeight();
+	return stream;
 }
 
 void printInput( int id, const Rectangle& rect ) {
