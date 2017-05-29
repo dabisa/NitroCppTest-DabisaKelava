@@ -6,6 +6,7 @@ ExternalProject_Add(googletest-project
     URL_HASH SHA256=f3ed3b58511efd272eb074a3a6d6fb79d7c2e6a0e374323d1e6bcbcc1ef141bf
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/deps/googletest
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
+               -Dgtest_force_shared_crt=ON
 )
 ExternalProject_Get_Property(googletest-project INSTALL_DIR)
 

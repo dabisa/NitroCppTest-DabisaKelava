@@ -7,9 +7,6 @@ ExternalProject_Add(jsoncpp-project
                -DCMAKE_POSITION_INDEPENDENT_CODE=On
                -DJSONCPP_WITH_TESTS=Off
                -DJSONCPP_WITH_PKGCONFIG_SUPPORT=Off
-    # Overwtire build and install commands to force Release build on MSVC.
-#    BUILD_COMMAND cmake --build <BINARY_DIR> --config Release
-#    INSTALL_COMMAND cmake --build <BINARY_DIR> --config Release --target install
 )
 ExternalProject_Get_Property(jsoncpp-project INSTALL_DIR)
 
