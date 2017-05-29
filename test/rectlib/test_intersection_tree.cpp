@@ -60,21 +60,6 @@ TEST (IntersectionTree, nitro_example) {
     };
 
     testForExpectedOutput(input, expected_output);
-
-    /*
-        vector<Rectangle> result;
-
-        IntersectionTree::generate(rectangles).visitInLevelOrder(
-        [&result] (const std::vector<unsigned>& ids, const Rectangle& rect) {
-            if(ids.size() > 1) {
-                result.push_back(rect);
-            }
-        });
-
-        EXPECT_EQ(result.size(), expected_result.size());
-        for(unsigned i = 0; i<result.size(); ++i) {
-            EXPECT_EQ(result[i], expected_result[i]);
-        }*/
 }
 
 TEST (IntersectionTree, empty) {
