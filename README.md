@@ -38,6 +38,11 @@ To run application execute (from build folder):
 > ./rect <json_input_file>
 ```
 
+Tested with:
+* CMake 3.5.1
+* GNU Make 4.1
+* g++ (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+
 ### Windows
 
 To build execute (from project root folder):
@@ -62,3 +67,8 @@ To run application execute (from build folder):
 ```
 > Debug\rect <json_input_file>
 ```
+
+Tested with:
+* CMake 3.8.1
+* Visual Studio 15 2017
+* MSVC 19.10.25019.0
