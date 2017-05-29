@@ -26,12 +26,12 @@ std::vector<Rectangle> JsonRectangleReader::read() const {
 		throw InvalidDataError("No rectangles found");
 	}
 
-	int number_of_rectangles = (max_rectangles_ == INFINITE_RECTANGLES) ? rects.size() : std::min(max_rectangles_, rects.size());
+	unsigned number_of_rectangles = (max_rectangles_ == INFINITE_RECTANGLES) ? rects.size() : std::min(max_rectangles_, rects.size());
 
 	std::vector<Rectangle> rectangles;
 	rectangles.reserve(number_of_rectangles);
 
-	for(unsigned int i = 0; i < number_of_rectangles; ++i) {
+	for(unsigned i = 0; i < number_of_rectangles; ++i) {
 
 		const Json::Value rect = rects[i];
 

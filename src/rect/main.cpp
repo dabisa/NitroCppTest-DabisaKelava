@@ -54,7 +54,7 @@ void printIntersection(const std::vector<unsigned>& ids, const Rectangle& rect) 
 int process(const char* file_name) {
 
     try {
-        constexpr int MAX_RECTANGLES = 10;
+        constexpr unsigned MAX_RECTANGLES = 10;
 
         vector<Rectangle> rectangles = JsonRectangleReader(file_name, MAX_RECTANGLES).read();
 

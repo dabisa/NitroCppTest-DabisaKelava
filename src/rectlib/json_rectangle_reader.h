@@ -20,17 +20,17 @@ public:
 		static InvalidDataError generateItemError(std::string description, unsigned id);
 	};
 
-	JsonRectangleReader(const char* file_name, unsigned int max_rectangles = INFINITE_RECTANGLES)
+	JsonRectangleReader(const char* file_name, unsigned max_rectangles = INFINITE_RECTANGLES)
 	 : file_name_(file_name), max_rectangles_(max_rectangles) {}
 
 	std::vector<Rectangle> read() const;
 
 private:
 
-	static constexpr int INFINITE_RECTANGLES = 0;
+	static constexpr unsigned INFINITE_RECTANGLES = 0;
 
 	const char* file_name_;
-	unsigned int max_rectangles_; 
+	unsigned max_rectangles_; 
 };
 
 #endif // _JSON_RECTANGLE_READER_H_
